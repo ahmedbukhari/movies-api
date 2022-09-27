@@ -10,7 +10,7 @@ let movies = [
     {
         title: "Zodiac",
         releaseDate: "19-01-2021",
-        openingText: "Hi",
+        openingText: "Hello",
         id: uuidv4()
     },
     {
