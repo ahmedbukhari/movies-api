@@ -28,17 +28,23 @@ let movies = [
 ];
 
 export const getMovies = (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.send(movies);
 }
 
 export const createMovie = (req, res) => {
+ 
+ 
+    
     const movie = req.body;
     const title = req.body.title;
 
     if (title){
     //spread user will fetch all fields of user then add generated password
     movies.push({ ...movie, id: uuidv4() }); 
-
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.send(`Movie with the title ${movie.title} added to the database!`);
 } 
 
