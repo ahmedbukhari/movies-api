@@ -53,6 +53,8 @@ export const createMovie = (req, res) => {
     }
 }
 
+
+
 export const getMovie = (req, res) => {
     const { id } = req.params;
     
